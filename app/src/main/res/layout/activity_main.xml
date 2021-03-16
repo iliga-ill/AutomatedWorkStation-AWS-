@@ -7,36 +7,195 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/activity_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:background="#3430"
+        android:id="@+id/activity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         >
 
-        <Button
-            android:id="@+id/CodeReader"
-            android:layout_width="270dp"
+        <TextView
+            android:id="@+id/btCodeReader"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Открыть логи"
+            android:layout_weight="0.5"
+            android:background="#25589a"
+            android:onClick="openCodeReader"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Взвешивание"
             android:textAllCaps="false"
-            android:textSize="30sp"
-            app:cornerRadius="25dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:cornerRadius="0dp"
+
             />
 
-        <Button
-            android:id="@+id/Logs"
-            android:layout_width="270dp"
+        <TextView
+            android:id="@+id/btLogs"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Открыть логи"
+            android:layout_weight="0.5"
+            android:background="#25589a"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Список ЕП"
             android:textAllCaps="false"
-            android:textSize="30sp"
-            app:cornerRadius="25dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            app:cornerRadius="0dp"
+            android:textColor="@color/white"
+            android:onClick="openLogs"
             />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CodeReaderPage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tvWeightOfBruttoText"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="Вес брутто (кг)"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tvWeightOfBrutto"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="124"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tvCodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="Штрихкод ЕП"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tvCode"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="124"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+        <TextView
+            android:id="@+id/tvTypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="Тип ЕП"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="124"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+        <TextView
+            android:id="@+id/tvWeightNettoText"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:text="Вес нетто (кг)"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/tvWeightNetto"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="124"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/btConfrim"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="#25589a"
+            android:text="Список ЕП"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            app:cornerRadius="0dp"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/LogsPage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+
+        app:layout_constraintTop_toBottomOf="@id/activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <HorizontalScrollView
+                android:id="@+id/hscroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textLogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:lineSpacingExtra="7dp"
+
+                    android:textColor="@color/purple_200"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </HorizontalScrollView>
+        </ScrollView>
     </LinearLayout>
 
 
