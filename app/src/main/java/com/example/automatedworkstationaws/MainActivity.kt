@@ -31,16 +31,16 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("ResourceAsColor")
     public fun openCodeReader(view: View){
-        findViewById<Button>(R.id.btCodeReader).setBackgroundColor(R.color.bg_color_2);
-        findViewById<Button>(R.id.btLogs).setBackgroundColor(R.color.bg_color_1);
+        findViewById<Button>(R.id.btCodeReader).setBackgroundColor(Color.rgb(22, 125, 253));
+        findViewById<Button>(R.id.btLogs).setBackgroundColor(Color.rgb(37, 88, 154));
         CodeReaderField.isVisible = true;
         LogsField.isVisible = false;
     }
 
     @SuppressLint("ResourceAsColor")
     public fun openLogs(view: View){
-        findViewById<Button>(R.id.btCodeReader).setBackgroundColor(R.color.bg_color_1);
-        findViewById<Button>(R.id.btLogs).setBackgroundColor(R.color.bg_color_2);
+        findViewById<Button>(R.id.btCodeReader).setBackgroundColor(Color.rgb(37, 88, 154));
+        findViewById<Button>(R.id.btLogs).setBackgroundColor(Color.rgb(22, 125, 253));
         CodeReaderField.isVisible = false;
         LogsField.isVisible = true;
     }

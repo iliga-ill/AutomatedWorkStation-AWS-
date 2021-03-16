@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/activity"
@@ -15,14 +16,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="#25589a"
         >
 
-        <TextView
+        <Button
             android:id="@+id/btCodeReader"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:background="#25589a"
             android:onClick="openCodeReader"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -35,12 +36,11 @@
 
             />
 
-        <TextView
+        <Button
             android:id="@+id/btLogs"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:background="#25589a"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="Список ЕП"
@@ -143,7 +143,7 @@
             android:textSize="40sp" />
 
         <Button
-            android:id="@+id/btConfrim"
+            android:id="@+id/btConfirm"
             android:layout_width="290dp"
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
