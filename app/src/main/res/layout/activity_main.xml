@@ -22,7 +22,7 @@
         <Button
             android:id="@+id/btCodeReader"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="0.5"
             android:onClick="openCodeReader"
             android:paddingTop="10dp"
@@ -39,7 +39,7 @@
         <Button
             android:id="@+id/btLogs"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="0.5"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -178,40 +178,41 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:orientation="horizontal"
-            android:background="@color/cardview_dark_background">
+            android:background="@color/cardview_dark_background"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/Num"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_weight="30"
                 android:text="№"
                 android:textAlignment="center"/>
             <TextView
                 android:id="@+id/Type"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_weight="10"
                 android:text="Тип"
                 android:textAlignment="center"/>
             <TextView
                 android:id="@+id/WeigthKilo"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_weight="20"
                 android:text="Вес"
                 android:textAlignment="center"/>
             <TextView
                 android:id="@+id/Time"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_weight="15"
                 android:text="Время"
                 android:textAlignment="center"/>
             <TextView
                 android:id="@+id/Date"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_weight="25"
                 android:text="Дата"
                 android:textAlignment="center"/>
@@ -229,7 +230,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
             </TableLayout>
         </LinearLayout>
 
@@ -239,37 +239,50 @@
             android:layout_height="50dp"
             android:orientation="horizontal"
             android:background="@color/cardview_dark_background"
+            android:gravity="center"
             >
 
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="35"
                 android:text="Назад"
+                android:onClick="prevPage"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                />
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="10"
                 android:text="1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                />
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="10"
                 android:text="2"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                />
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="10"
                 android:text="..."
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 />
             <Button
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="35"
                 android:text="Вперед"
+                android:onClick="nextPage"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                />
         </LinearLayout>
 

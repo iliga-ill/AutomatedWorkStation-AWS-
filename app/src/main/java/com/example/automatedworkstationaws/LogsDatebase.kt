@@ -52,9 +52,9 @@ class LogsDatabase : Serializable {
 //    }
 
     fun writeLog(num: Long, type: Char, weight: Int, date: String, data: String) {
-        if (allData.size > LOGS_LENGTH) {
-            cleanLogs(allData)
-        }
+//        if (allData.size > LOGS_LENGTH) {
+//            cleanLogs(allData)
+//        }
 
         file.appendText("$num|$type|$weight|$date|$data\n")
 //        val writer = file.bufferedWriter()
