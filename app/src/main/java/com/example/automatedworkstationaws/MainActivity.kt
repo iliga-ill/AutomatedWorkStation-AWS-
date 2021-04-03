@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity() {
             btnWidth2 = 90.0
 
             val balance = width - btnWidth1 * 2
-            num =Math.ceil(balance/btnWidth2).toInt()
+            num = Math.ceil(balance/btnWidth2).toInt()
             if (num % 2 == 0) num -= 1
         }
 
@@ -179,7 +179,7 @@ class MainActivity : AppCompatActivity() {
             val btn = Button(this)
             btn.minimumWidth = 0
             btn.id = it
-            btn.width = 108
+            btn.width = btnWidth2.toInt()
             btn.height = container.height
             btn.text = it.toString()
             btn.setPadding(0,5,0,5)
