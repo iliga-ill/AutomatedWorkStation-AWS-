@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/activity"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_weight="1"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -149,7 +149,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="20dp"
             android:background="#25589a"
-            android:text="Список ЕП"
+            android:text="Принять"
             android:textAllCaps="false"
             android:layout_gravity="center"
             android:textSize="20sp"
@@ -223,7 +223,8 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@color/white">
 
             <TableLayout
                 android:id="@+id/textLogs"
@@ -235,10 +236,10 @@
 
         <LinearLayout
             android:id="@+id/Footer"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150px"
             android:orientation="horizontal"
-            android:background="@color/cardview_dark_background"
+            android:background="@color/white"
             android:gravity="center"
             >
 
@@ -250,22 +251,30 @@
                 android:onClick="prevPage"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
+                android:textColor="@color/cardview_dark_background"
+                android:background="@color/white"
                />
             <Button
+                android:id="@+id/firstPage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="10"
                 android:text="1"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
+                android:textColor="@color/cardview_dark_background"
+                android:background="@color/white"
                />
             <Button
+                android:id="@+id/secondPage"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="10"
                 android:text="2"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
+                android:textColor="@color/cardview_dark_background"
+                android:background="@color/white"
                />
             <Button
                 android:layout_width="0dp"
@@ -274,8 +283,11 @@
                 android:text="..."
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
+                android:textColor="@color/cardview_dark_background"
+                android:background="@color/white"
                 />
             <Button
+                android:id="@+id/forward"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="35"
@@ -283,6 +295,8 @@
                 android:onClick="nextPage"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
+                android:textColor="@color/cardview_dark_background"
+                android:background="@color/white"
                />
         </LinearLayout>
 
